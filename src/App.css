@@ -1,38 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  background-color: #ddd;
+}
+
 .App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.music-player {
+  display: block;
+  background-color: #313131;
+  display: block;
+  margin: 0px auto;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8),
+    inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.music-player > h4 {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.music-player > p {
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.music-player > p span {
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.music-player--details .details-img {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.details-img img {
+  display: block;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8),
+    -6px -6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.range-img:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  right: -25px;
+  bottom: -25px;
+  border-radius: 50%;
+  border: 3px dashed rgba(255, 206, 0, 1);
+}
+
+.music-player--details .details-title {
+  color: #eee;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.music-player--details .details-artist {
+  color: #aaa;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.music-player--controls {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.music-player--controls .play-btn {
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+    -4px -4px 10px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.4),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  background-color: #ffce00;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.music-player--controls .skip-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+}
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list__link {
+  transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+}
+.list__link:focus,
+.list__link:hover {
+  color: #d30320;
+}
+
+.player__footer {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.list--footer a {
+  opacity: 0.5;
+}
+.list--footer a:focus,
+.list--footer a:hover {
+  opacity: 0.9;
+}
+.list--footer {
+  justify-content: space-between;
+}
+
+/* Next songs */
+
+.text-anim {
+  font-size: 23px;
+  font-weight: 550;
+  color: black;
+  text-align: center;
+  animation: effect 3s linear infinite;
+  padding-bottom: 20px;
+}
+
+.nextsong-details {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  padding: 1px;
+  height: 4em;
+}
+
+.nextsong-details img {
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  text-align: center;
+}
+
+.nextsong-details p {
+  margin-left: 20px;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(129, 129, 129, 0.4);
+}
+
+/* Animation */
+
+@-webkit-keyframes background-scroll {
+  100% {
+    background-position: 50px 50px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@-moz-keyframes background-scroll {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes background-scroll {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes background-scroll {
+  100% {
+    background-position: 50px 50px;
   }
 }
