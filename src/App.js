@@ -8,22 +8,90 @@ const App = () => {
     {
       title: "Kaparah",
       artist: "Avraham Fried",
-      album: " BHD",
-      track: "6",
-      // "year": "1",
+      album: " Bring The House Down",
       img_src:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP6XsQ5ol2fV-cy7g6HbIqVNiiG88iwapK1ulkodJek9nPUpq6DGzimZmdrxFkguUmib0&usqp=CAU",
+        "https://www.nigunmusic.com/media/catalog/product/cache/47575b44fb65aa0dba72a7d894492d3c/b/r/bringthehousedown.jpg",
       src: "./music/Kaparah.mp3",
     },
     {
-      title: "[oops]",
-      artist: "potsu",
-      album: "[oops]",
-      track: "1",
-      year: "",
+      title: "לך יוצר הכל",
+      artist: "MBD",
       img_src:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP6XsQ5ol2fV-cy7g6HbIqVNiiG88iwapK1ulkodJek9nPUpq6DGzimZmdrxFkguUmib0&usqp=CAU",
-      src: "./songs/[oops].mp3",
+        "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
+      src: "./music/לך יוצר הכל.mp3",
+    },
+    {
+      title: "מלא כל הארץ כבודו",
+      artist: "MBD",
+      img_src:
+        "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
+      src: "./music/מלא כל הארץ כבודו.mp3",
+    },
+    {
+      title: "Kaparah",
+      artist: "Avraham Fried",
+      album: " Bring The House Down",
+      img_src:
+        "https://www.nigunmusic.com/media/catalog/product/cache/47575b44fb65aa0dba72a7d894492d3c/b/r/bringthehousedown.jpg",
+      src: "./music/Kaparah.mp3",
+    },
+    {
+      title: "לך יוצר הכל",
+      artist: "MBD",
+      img_src:
+        "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
+      src: "./music/לך יוצר הכל.mp3",
+    },
+    {
+      title: "מלא כל הארץ כבודו",
+      artist: "MBD",
+      img_src:
+        "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
+      src: "./music/מלא כל הארץ כבודו.mp3",
+    },
+    {
+      title: "Kaparah",
+      artist: "Avraham Fried",
+      album: " Bring The House Down",
+      img_src:
+        "https://www.nigunmusic.com/media/catalog/product/cache/47575b44fb65aa0dba72a7d894492d3c/b/r/bringthehousedown.jpg",
+      src: "./music/Kaparah.mp3",
+    },
+    {
+      title: "לך יוצר הכל",
+      artist: "MBD",
+      img_src:
+        "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
+      src: "./music/לך יוצר הכל.mp3",
+    },
+    {
+      title: "מלא כל הארץ כבודו",
+      artist: "MBD",
+      img_src:
+        "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
+      src: "./music/מלא כל הארץ כבודו.mp3",
+    },
+    {
+      title: "Kaparah",
+      artist: "Avraham Fried",
+      album: " Bring The House Down",
+      img_src:
+        "https://www.nigunmusic.com/media/catalog/product/cache/47575b44fb65aa0dba72a7d894492d3c/b/r/bringthehousedown.jpg",
+      src: "./music/Kaparah.mp3",
+    },
+    {
+      title: "לך יוצר הכל",
+      artist: "MBD",
+      img_src:
+        "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
+      src: "./music/לך יוצר הכל.mp3",
+    },
+    {
+      title: "מלא כל הארץ כבודו",
+      artist: "MBD",
+      img_src:
+        "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
+      src: "./music/מלא כל הארץ כבודו.mp3",
     },
   ]);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);

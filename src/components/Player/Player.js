@@ -39,12 +39,18 @@ function Player(props) {
       });
     }
   };
+  console.log(props.currentSongIndex);
+  const myCallback = () => {
+    props.setCurrentSongIndex(props.currentSongIndex + 1);
+    audioElement.current.pause();
+    setTimeout(props.currentSongIndex, 1500);
+  };
 
   return (
     <>
-     
       <div className="music-player">
         <audio
+          onEnded={() => myCallback()}
           src={props.songs[props.currentSongIndex].src}
           ref={audioElement}
         ></audio>
@@ -56,26 +62,23 @@ function Player(props) {
           SkipSong={SkipSong}
         />
 
-<p>
-        <div className="text-anim">
-          <strong>Upcoming Song:</strong>
-        </div>
+        <p>
+          <div className="text-anim">
+            <strong>Upcoming Song:</strong>
+          </div>
 
-        <div className="nextsong-details">
-          <img
-            src={props.songs[props.nextSongIndex].img_src}
-            alt={props.songs[props.nextSongIndex].title}
-            style={{ width: "4em", height: "auto", textAlign: "center" }}
-          />
-          <p>
-            <b>{props.songs[props.nextSongIndex].title} </b>&nbsp; by &nbsp;
-            <b>{props.songs[props.nextSongIndex].artist}</b>
-            {/* &nbsp; from album
-            &nbsp; */}
-            {/* <b>{props.songs[props.nextSongIndex].album}</b> */}
-          </p>
-        </div>
-      </p>
+          <div className="nextsong-details">
+            <img
+              src={props.songs[props.nextSongIndex].img_src}
+              alt={props.songs[props.nextSongIndex].title}
+              style={{ width: "4em", height: "auto", textAlign: "center" }}
+            />
+            <p>
+              <b>{props.songs[props.nextSongIndex].title} </b>&nbsp; by &nbsp;
+              <b>{props.songs[props.nextSongIndex].artist}</b>
+            </p>
+          </div>
+        </p>
 
         <div class="player__footer">
           <ul class="list list--footer">
