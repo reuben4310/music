@@ -6,6 +6,7 @@ function Player(props) {
   const audioElement = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  console.log(props.songs[props.currentSongIndex].src);
   useEffect(() => {
     if (isPlaying) {
       audioElement.current.play();
@@ -41,9 +42,11 @@ function Player(props) {
   };
   console.log(props.currentSongIndex);
   const myCallback = () => {
+    if (props.currentSongIndex === props.songs.length - 1) {
+      props.setCurrentSongIndex(0);
+      return;
+    }
     props.setCurrentSongIndex(props.currentSongIndex + 1);
-    audioElement.current.pause();
-    setTimeout(props.currentSongIndex, 1500);
   };
 
   return (
@@ -80,29 +83,29 @@ function Player(props) {
           </div>
         </p>
 
-        <div class="player__footer">
-          <ul class="list list--footer">
+        <div className="player__footer">
+          <ul className="list list--footer">
             <li>
-              <a href="#" class="list__link">
-                <i class="fa fa-heart-o"></i>
+              <a href="#" className="list__link">
+                <i className="fa fa-heart-o"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="list__link">
-                <i class="fa fa-random"></i>
+              <a href="#" className="list__link">
+                <i className="fa fa-random"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="list__link">
-                <i class="fa fa-undo"></i>
+              <a href="#" className="list__link">
+                <i className="fa fa-undo"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="list__link">
-                <i class="fa fa-ellipsis-h"></i>
+              <a href="#" className="list__link">
+                <i className="fa fa-ellipsis-h"></i>
               </a>
             </li>
           </ul>
