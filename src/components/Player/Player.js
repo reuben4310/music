@@ -18,14 +18,7 @@ function Player(props) {
   const SkipSong = (forwards = true) => {
     if (forwards) {
       props.setCurrentSongIndex(() => {
-        let temp = props.currentSongIndex;
-        temp++;
-
-        if (temp > props.songs.length - 1) {
-          temp = 0;
-        }
-
-        return temp;
+        return (props.currentSongIndex + 1) % props.songs.length;
       });
     } else {
       props.setCurrentSongIndex(() => {
@@ -42,13 +35,10 @@ function Player(props) {
   };
   console.log(props.currentSongIndex);
   const myCallback = () => {
-    if (props.currentSongIndex === props.songs.length - 1) {
-      props.setCurrentSongIndex(0);
-      return;
-    }
-    props.setCurrentSongIndex(props.currentSongIndex + 1);
+    props.setCurrentSongIndex(
+      (props.currentSongIndex + 1) % props.songs.length
+    );
   };
-
   return (
     <>
       <div className="music-player">
