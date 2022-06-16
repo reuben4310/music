@@ -2,11 +2,16 @@ import React, { useState, useRef, useEffect } from "react";
 import PlayerDetails from "./Details";
 import PlayerControls from "./Controls";
 
-function Player(props) {
+function Player({
+  currentSongIndex,
+  nextSongIndex,
+  setCurrentSongIndex,
+  songs,
+}) {
   const audioElement = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  console.log(props.songs[props.currentSongIndex].src);
+  console.log(songs[currentSongIndex].src);
   useEffect(() => {
     if (isPlaying) {
       audioElement.current.play();
@@ -17,37 +22,35 @@ function Player(props) {
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
-      props.setCurrentSongIndex(() => {
-        return (props.currentSongIndex + 1) % props.songs.length;
+      setCurrentSongIndex(() => {
+        return (currentSongIndex + 1) % songs.length;
       });
     } else {
-      props.setCurrentSongIndex(() => {
-        let temp = props.currentSongIndex;
+      setCurrentSongIndex(() => {
+        let temp = currentSongIndex;
         temp--;
 
         if (temp < 0) {
-          temp = props.songs.length - 1;
+          temp = songs.length - 1;
         }
 
         return temp;
       });
     }
   };
-  console.log(props.currentSongIndex);
+  console.log(currentSongIndex);
   const myCallback = () => {
-    props.setCurrentSongIndex(
-      (props.currentSongIndex + 1) % props.songs.length
-    );
+    setCurrentSongIndex((currentSongIndex + 1) % songs.length);
   };
   return (
     <>
       <div className="music-player">
         <audio
           onEnded={() => myCallback()}
-          src={props.songs[props.currentSongIndex].src}
+          src={songs[currentSongIndex].src}
           ref={audioElement}
         ></audio>
-        <PlayerDetails song={props.songs[props.currentSongIndex]} />
+        <PlayerDetails song={songs[currentSongIndex]} />
 
         <PlayerControls
           isPlaying={isPlaying}
@@ -62,13 +65,13 @@ function Player(props) {
 
           <div className="nextsong-details">
             <img
-              src={props.songs[props.nextSongIndex].img_src}
-              alt={props.songs[props.nextSongIndex].title}
+              src={songs[nextSongIndex].img_src}
+              alt={songs[nextSongIndex].title}
               style={{ width: "4em", height: "auto", textAlign: "center" }}
             />
             <p>
-              <b>{props.songs[props.nextSongIndex].title} </b>&nbsp; by &nbsp;
-              <b>{props.songs[props.nextSongIndex].artist}</b>
+              <b>{songs[nextSongIndex].title} </b>&nbsp; by &nbsp;
+              <b>{songs[nextSongIndex].artist}</b>
             </p>
           </div>
         </p>
