@@ -20,14 +20,14 @@ const songsList = [
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/לך יוצר הכל.mp3",
+    src: "./music/Haspuos/לך יוצר הכל.mp3",
   },
   {
     title: "מלא כל הארץ כבודו",
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/מלא כל הארץ כבודו.mp3",
+    src: "./music/Haspuos/מלא כל הארץ כבודו.mp3",
   },
   {
     title: "Kaparah",
@@ -42,14 +42,14 @@ const songsList = [
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/לך יוצר הכל.mp3",
+    src: "./music/Haspuos/לך יוצר הכל.mp3",
   },
   {
     title: "מלא כל הארץ כבודו",
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/מלא כל הארץ כבודו.mp3",
+    src: "./music/Haspuos/מלא כל הארץ כבודו.mp3",
   },
   {
     title: "Kaparah",
@@ -64,14 +64,14 @@ const songsList = [
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/לך יוצר הכל.mp3",
+    src: "./music/Haspuos/לך יוצר הכל.mp3",
   },
   {
     title: "מלא כל הארץ כבודו",
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/מלא כל הארץ כבודו.mp3",
+    src: "./music/Haspuos/מלא כל הארץ כבודו.mp3",
   },
   {
     title: "Kaparah",
@@ -86,14 +86,14 @@ const songsList = [
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/לך יוצר הכל.mp3",
+    src: "./music/Haspuos/לך יוצר הכל.mp3",
   },
   {
     title: "מלא כל הארץ כבודו",
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/מלא כל הארץ כבודו.mp3",
+    src: "./music/Haspuos/מלא כל הארץ כבודו.mp3",
   },
   {
     title: "Kaparah",
@@ -108,14 +108,14 @@ const songsList = [
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/לך יוצר הכל.mp3",
+    src: "./music/Haspuos/לך יוצר הכל.mp3",
   },
   {
     title: "מלא כל הארץ כבודו",
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/מלא כל הארץ כבודו.mp3",
+    src: "./music/Haspuos/מלא כל הארץ כבודו.mp3",
   },
   {
     title: "Kaparah",
@@ -130,14 +130,14 @@ const songsList = [
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/לך יוצר הכל.mp3",
+    src: "./music/Haspuos/לך יוצר הכל.mp3",
   },
   {
     title: "מלא כל הארץ כבודו",
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/מלא כל הארץ כבודו.mp3",
+    src: "./music/Haspuos/מלא כל הארץ כבודו.mp3",
   },
   {
     title: "Kaparah",
@@ -152,14 +152,14 @@ const songsList = [
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/לך יוצר הכל.mp3",
+    src: "./music/Haspuos/לך יוצר הכל.mp3",
   },
   {
     title: "מלא כל הארץ כבודו",
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/מלא כל הארץ כבודו.mp3",
+    src: "./music/Haspuos/מלא כל הארץ כבודו.mp3",
   },
   {
     title: "Kaparah",
@@ -174,14 +174,14 @@ const songsList = [
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/לך יוצר הכל.mp3",
+    src: "./music/Haspuos/לך יוצר הכל.mp3",
   },
   {
     title: "מלא כל הארץ כבודו",
     artist: "MBD",
     img_src:
       "https://cdn.shopify.com/s/files/1/0420/2505/products/WhatsAppImage2022-03-09at12.46.23PM_2000x.jpg?v=1647921739",
-    src: "./music/מלא כל הארץ כבודו.mp3",
+    src: "./music/Haspuos/מלא כל הארץ כבודו.mp3",
   },
 ];
 export default songsList;
