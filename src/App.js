@@ -26,8 +26,12 @@ import songsList from "./components/songsList";
 
 const App = () => {
   const [songs, setSongs] = useState(songsList);
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+
+  const random = Math.floor(Math.random() * songs.length);
+  const [currentSongIndex, setCurrentSongIndex] = useState(random);
+  console.log("currentSongIndex",currentSongIndex);
   const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+
   // const userAccessToken =
   //   "BQD-8RvVbmDpf24_JCFJ0oyAXKt-UUlurN_jJQxAuGA39Y88hkM-HQIJP_mLOVm5fahMF1Jwcyb1B_bdwBdOwIb1_pfEZuo8J-tSyS7WMc40Z65HRyE5d8wdLuuZbyaOjCZvzJp4IXAZVfNtdN6nEqo8ZJk36ITlObe0-2D738Eji0t1Zoof2rVObpArwK7Gci5NqIM51zWpiS3ariUfYFuVArqMCHOZe9Kd9LvDuELDXCCMHkn7-7qpALS-bJwe47SE18_kvw54itD7TfFF4686OAJpnPWaFfuFN4Pf";
 

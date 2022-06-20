@@ -9,21 +9,25 @@ function Player({
   songs,
 }) {
   const audioElement = useRef(null);
+  console.log("audioElement", audioElement);
   const [isPlaying, setIsPlaying] = useState(false);
+  // const random = songs[Math.floor(Math.random() * songs.length)];
+  // console.log("random", random);
 
-  console.log(songs[currentSongIndex].src);
   useEffect(() => {
     if (isPlaying) {
       audioElement.current.play();
+      // console.log(audioElement.current);
     } else {
       audioElement.current.pause();
     }
   });
 
-  const SkipSong = (forwards = true) => {
+  const skipSong = (forwards = true) => {
     if (forwards) {
       setCurrentSongIndex(() => {
-        return (currentSongIndex + 1) % songs.length;
+        return Math.floor(Math.random() * songs.length);
+        // Math.floor(Math.random() * songs.length);
       });
     } else {
       setCurrentSongIndex(() => {
@@ -38,7 +42,7 @@ function Player({
       });
     }
   };
-  console.log(currentSongIndex);
+
   const myCallback = () => {
     setCurrentSongIndex((currentSongIndex + 1) % songs.length);
   };
@@ -51,13 +55,12 @@ function Player({
           ref={audioElement}
         ></audio>
         <PlayerDetails song={songs[currentSongIndex]} />
-
+        {/* {console.log(songs[currentSongIndex])}; */}{" "}
         <PlayerControls
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
-          SkipSong={SkipSong}
+          skipSong={skipSong}
         />
-
         <p>
           <div className="text-anim">
             <strong>Upcoming Song:</strong>
@@ -75,7 +78,6 @@ function Player({
             </p>
           </div>
         </p>
-
         <div className="player__footer">
           <ul className="list list--footer">
             <li>
@@ -103,7 +105,6 @@ function Player({
             </li>
           </ul>
         </div>
-
         {/* <h4>Lofi Music Player React </h4> */}
       </div>
     </>
