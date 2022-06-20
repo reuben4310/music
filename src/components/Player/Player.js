@@ -11,37 +11,33 @@ function Player({
   const audioElement = useRef(null);
   console.log("audioElement", audioElement);
   const [isPlaying, setIsPlaying] = useState(false);
-  // const random = songs[Math.floor(Math.random() * songs.length)];
-  // console.log("random", random);
 
   useEffect(() => {
     if (isPlaying) {
       audioElement.current.play();
-      // console.log(audioElement.current);
     } else {
       audioElement.current.pause();
     }
   });
 
-  const skipSong = (forwards = true) => {
-    if (forwards) {
-      setCurrentSongIndex(() => {
-        return Math.floor(Math.random() * songs.length);
-        // Math.floor(Math.random() * songs.length);
-      });
-    } else {
-      setCurrentSongIndex(() => {
-        let temp = currentSongIndex;
-        temp--;
+  // const skipSong = (forwards = true) => {
+  //   if (forwards) {
+  //     setCurrentSongIndex(() => {
+  //       return Math.floor(Math.random() * songs.length);
+  //     });
+  //   } else {
+  //     setCurrentSongIndex(() => {
+  //       let temp = currentSongIndex;
+  //       temp--;
 
-        if (temp < 0) {
-          temp = songs.length - 1;
-        }
+  //       if (temp < 0) {
+  //         temp = songs.length - 1;
+  //       }
 
-        return temp;
-      });
-    }
-  };
+  //       return temp;
+  //     });
+  //   }
+  // };
 
   const myCallback = () => {
     setCurrentSongIndex((currentSongIndex + 1) % songs.length);
@@ -55,11 +51,11 @@ function Player({
           ref={audioElement}
         ></audio>
         <PlayerDetails song={songs[currentSongIndex]} />
-        {/* {console.log(songs[currentSongIndex])}; */}{" "}
+
         <PlayerControls
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
-          skipSong={skipSong}
+          // skipSong={skipSong}
         />
         <p>
           <div className="text-anim">
