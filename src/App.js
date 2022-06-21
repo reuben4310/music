@@ -9,7 +9,7 @@ const App = () => {
 
   const random = Math.floor(Math.random() * songs.length);
   const [currentSongIndex, setCurrentSongIndex] = useState(random);
-  console.log("currentSongIndex", currentSongIndex);
+  console.log(songs);
   const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
   useEffect(() => {

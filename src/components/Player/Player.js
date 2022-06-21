@@ -6,11 +6,16 @@ function Player({
   currentSongIndex,
   nextSongIndex,
   setCurrentSongIndex,
+  setNextSongIndex,
   songs,
 }) {
   const audioElement = useRef(null);
   console.log("audioElement", audioElement);
   const [isPlaying, setIsPlaying] = useState(false);
+  // const random = Math.floor(Math.random() * songs.length);
+  // const next =()=> setNextSongIndex(random)
+  // console.log();
+  console.log(currentSongIndex, nextSongIndex);
 
   useEffect(() => {
     if (isPlaying) {
@@ -20,28 +25,10 @@ function Player({
     }
   });
 
-  // const skipSong = (forwards = true) => {
-  //   if (forwards) {
-  //     setCurrentSongIndex(() => {
-  //       return Math.floor(Math.random() * songs.length);
-  //     });
-  //   } else {
-  //     setCurrentSongIndex(() => {
-  //       let temp = currentSongIndex;
-  //       temp--;
-
-  //       if (temp < 0) {
-  //         temp = songs.length - 1;
-  //       }
-
-  //       return temp;
-  //     });
-  //   }
-  // };
-
   const myCallback = () => {
-    setCurrentSongIndex((currentSongIndex + 1) % songs.length);
+    return Math.floor(Math.random() * songs.length);
   };
+
   return (
     <>
       <div className="music-player">
@@ -58,11 +45,11 @@ function Player({
           // skipSong={skipSong}
         />
         <p>
-          <div className="text-anim">
+          {/* <div className="text-anim">
             <strong>Upcoming Song:</strong>
-          </div>
+          </div> */}
 
-          <div className="nextsong-details">
+          {/* <div className="nextsong-details">
             <img
               src={songs[nextSongIndex].img_src}
               alt={songs[nextSongIndex].title}
@@ -72,7 +59,7 @@ function Player({
               <b>{songs[nextSongIndex].title} </b>&nbsp; by &nbsp;
               <b>{songs[nextSongIndex].artist}</b>
             </p>
-          </div>
+          </div> */}
         </p>
         <div className="player__footer">
           <ul className="list list--footer">
