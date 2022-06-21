@@ -26,7 +26,7 @@ function Player({
   });
 
   const myCallback = () => {
-    return Math.floor(Math.random() * songs.length);
+    setCurrentSongIndex(Math.floor(Math.random() * songs.length));
   };
 
   return (
