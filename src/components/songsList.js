@@ -63,7 +63,7 @@ const songsList = [
     title: "Peduscha",
     artist: "Boruch Levine",
     img_src: "https://i.ebayimg.com/images/g/M9UAAOSwnhlcFpNV/s-l500.jpg",
-    src: "./music/Peduscha/01 Peduscha.mp3",
+    src: "./music/Peduscho/01 Peduscha.mp3",
   },
   {
     title: "והנחילנו",
