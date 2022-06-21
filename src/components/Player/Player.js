@@ -15,7 +15,6 @@ function Player({
   // const random = Math.floor(Math.random() * songs.length);
   // const next =()=> setNextSongIndex(random)
   // console.log();
-  console.log(currentSongIndex, nextSongIndex);
 
   useEffect(() => {
     if (isPlaying) {
